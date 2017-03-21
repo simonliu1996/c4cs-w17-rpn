@@ -10,7 +10,8 @@ OPERATORS = {
 	'^': operator.pow,
 	'x': operator.xor,
 }
-
+def print_header():
+	print ("welcome to the rpn calculator")
 
 def calculate(arg):
 	stack = list()
@@ -28,6 +29,7 @@ def calculate(arg):
 	return stack.pop()
 
 def main():
+	print_header()
 	while True:
 		result = calculate(input('rpn calc> '))
 		print("Result:", result)
