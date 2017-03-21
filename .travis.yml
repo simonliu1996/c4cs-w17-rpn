@@ -4,6 +4,8 @@ python:
 before_install:
   - pip install pytest pytest-cov
   - pip install coveralls
-script: python3 -m unittest
+script:
+  - python3 -m unittest
+  - coverage run --source -m unittest
 after_success:
   - coveralls
